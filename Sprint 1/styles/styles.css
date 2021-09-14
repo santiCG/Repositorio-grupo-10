@@ -1,0 +1,170 @@
+:root
+{
+    --blue-color:rgb(9, 190, 190);
+    --black-color: #444344;
+    --box-shadow:0 0 5px black
+}
+html,body
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+nav
+{
+    display: flex;
+    background-color: var(--blue-color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav ul
+{
+    display: flex;
+}
+nav li
+{
+    list-style: none;
+}
+.brandimage
+{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+nav li a
+{
+    padding-right: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+nav li a:hover
+{
+    text-decoration: underline;
+}
+.main_section
+{
+    padding: 15%;
+    text-align: center;
+    padding-top: 3%;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.products
+{
+   height: 100px;
+   padding-top: 2%;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 300px;
+}
+.product
+{
+    padding: 0px;  
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.content
+{
+    padding: 15px;
+    padding-bottom: 10%;
+    padding-top: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    color: var(--black-color);
+}
+h1
+{
+    padding-bottom: 30px;
+    color: var(--black-color);
+}
+.img
+{
+    height: 130px;
+    width: 170px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+.main_boton
+{
+    border: solid;
+    border-color: var(--blue-color);
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    padding-top: 0px;
+    background-color: var(--blue-color);
+    outline: none;
+}
+.main_boton:hover
+{
+    cursor: pointer;
+}
+.img_boton
+{
+    width: 35px;
+    height: 35px;
+    background-color: var(--blue-color);
+}
+.categories
+{
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    padding-bottom: 90px;
+}
+.categorie
+{
+    padding: 3%;
+}
+.categories > div >img
+{
+    width: 220px;
+    height: 230px;
+    background-color: #ffff;
+}
+.menciones
+{
+    display: flex;
+    padding-top: 120px;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+.personas
+{
+    padding: 3%;
+}
+.title
+{
+    color: var(--black-color);
+    font-size: 2em;
+    padding-top: 80px;
+}
+.personas > img
+{
+    width: 200px;
+    height: 200px;
+    box-shadow:0 0 7px black;
+}
+.footer
+{
+    width: 100%;
+    background-color: var(--black-color);
+    height: 60px;
+    color: white;
+    align-items: center;
+}
+.footer > a
+{
+    padding-right: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+}
+.footer > a:hover{
+    text-decoration: underline;
+}

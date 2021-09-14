@@ -1,0 +1,44 @@
+:root
+{
+    --blue-color:rgb(9, 190, 190);
+    --black-color: #444344;
+    --box-shadow:0 0 5px black
+}
+body
+{
+    background-color: #30343F;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content
+{
+    text-align: center;
+}
+.content > img
+{
+    width: 210px;
+    height: 220px;
+}
+.fallo
+{
+    width: 230px;
+    height: 270px;
+}
+.mensaje
+{
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+.volver
+{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+.volver a{
+    color: var(--blue-color);
+}

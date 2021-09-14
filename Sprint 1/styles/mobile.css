@@ -1,0 +1,35 @@
+@media (max-width:600px)
+{
+    .products
+    {
+        display: inherit;
+        height: auto;
+        padding: 15%;
+        padding-bottom: 90px;
+        padding-top: 15px;
+    }
+    .product{
+        margin-top: auto;
+        padding-top: 30px;
+    }
+    .main_section
+    {
+        padding: 5%;
+    }
+    .categories, .menciones{
+        display: inherit;
+        height: auto;
+    }
+    .personas{
+        padding-top: 90px;
+    }
+    .menciones{
+        padding-top: 50px;
+    }
+    .footer{
+        margin-top: 50px;
+    }
+    .image{
+        padding-left: 10px;
+    }
+}

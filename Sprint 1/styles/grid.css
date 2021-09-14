@@ -1,0 +1,65 @@
+.container
+{
+    max-width: 900px;
+    margin: auto;
+}
+
+.row
+{
+    display: flex;
+}
+.colu-1
+{
+    width: 10%;
+}
+.colu-2
+{
+    width: 20%;
+}
+.colu-3
+{
+    width: 30%;
+}
+.colu-4
+{
+    width: 40%;
+}
+.colu-5
+{
+    width: 50%;
+}
+.colu-6
+{
+    width: 60%;
+}
+.colu-7
+{
+    width: 70%;
+}
+.colu-8
+{
+    width: 80%;
+}
+.colu-9
+{
+    width: 90%;
+}
+.colu-10
+{
+    width: 100%;
+}
+.colu-1,.colu-2,.colu-3,.colu-4,.colu-5,.colu-6,.colu-7,.colu-8,.colu-9,.colu-10{
+    padding: 10px;
+}
+
+@media (max-width:900px)
+{
+    .row
+    {
+        display: inherit; 
+    }
+    .colu-1,.colu-2,.colu-3,.colu-4,.colu-5,.colu-6,.colu-7,.colu-8,.colu-9,.colu-10
+    {
+        width: 100%; 
+    }
+}

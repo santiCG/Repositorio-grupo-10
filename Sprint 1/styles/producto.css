@@ -1,0 +1,152 @@
+:root
+{
+    --blue-color:rgb(9, 190, 190);
+    --black-color: #444344;
+    --box-shadow:0 0 5px black
+}
+html,body
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+.title
+{
+    color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    padding: 6%;
+    font-size: 2.3em;
+    padding-bottom: 3%;
+}
+nav
+{
+    display: flex;
+    padding: 10px;
+    background-color: var(--blue-color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav ul
+{
+    display: flex;
+}
+nav li
+{
+    list-style: none;
+}
+.brandimage
+{
+    width: 60px;
+    height: 60px;
+}
+nav li a
+{
+    padding-right: 25px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+nav li a:hover
+{
+    text-decoration: underline;
+}
+.row
+{
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+    align-items:center;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+.colu-1
+{
+    width: 20%;
+}
+.colu-2
+{
+    width: 40%;
+}
+.colu-3
+{
+    width: 60%;
+}
+.colu-4
+{
+    width: 80%;
+    padding-right: 20px;
+}
+.colu-5
+{
+    width: 100%;
+}
+.img
+{
+    width: 330px;
+    height: 220px;
+    padding-right: 30px;
+}
+.img_mid
+{
+    padding-left: 30px;
+    width: 330px;
+    height: 220px;
+}
+.footer
+{
+    width: 100%;
+    background-color: var(--black-color);
+    height: 60px;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.footer > a
+{
+    padding-right: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+}
+.footer > a:hover{
+    text-decoration: underline;
+}
+.botoncito
+{
+    background-color: #AD87AA;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    height: 30px;
+    outline: none;
+}
+.botoncito:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.img3
+{
+    width: 260px;
+    height: 270px;
+}
+@media (max-width:900px)
+{
+    .row
+    {
+        display: inherit; 
+    }
+    .colu-1,.colu-2,.colu-3,.colu-4,.colu-5
+    {
+        width: 100%; 
+    }
+}

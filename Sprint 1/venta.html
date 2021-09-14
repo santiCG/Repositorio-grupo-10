@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta Brand</title>
+    <link rel="stylesheet" href="styles/venta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/animation.css">
+</head>
+<body>
+    <nav class="nav fadeInDown">
+        <div class="brand_image">
+                <a href="index.html"><img class="brandimage" src="images/zona-gato.png" alt=""></a>
+        </div>
+        <div class="nav_options">
+           <ul class="lista">
+               <li><strong><a href="">preguntas frecuentes</a></strong></li>
+               <li><strong><a href="">producto y descripcion</a></strong></li>
+           </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="colu-4">
+                <div class="modulo_pago fadeInUp">
+                    <img class="articulo" src="https://www.affinity-petcare.com/advance/sites/default/files/field/image/los_gatos_lloran_1.jpg" alt="">
+                    <h3>Gatito</h3>
+                    <p>descripcion</p>
+                </div>
+            </div>
+            <div class="colu-8">
+                <div class="formulario_pago fadeInUp">
+                    <form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MDXZZKHMWNRFE" method="POST">
+                        <label for="name">nombre</label>
+                        <br>
+                        <input type="text" placeholder="" name="name">
+                        <br>
+                        <label for="last_name">apellido</label>
+                        <br>
+                        <input type="text" placeholder="" name="last_name">
+                        <br>
+                        <label for="E-mail">E-mail</label>
+                        <br>
+                        <input type="text" placeholder="" name="E-mail">
+                        <br>
+                        <label for="phone">telefono</label>
+                        <br>
+                        <input type="number" placeholder="" name="phone">
+                        <br>
+                        <br>
+                        <label for=""></label>
+                        <button class="boton">Confirmar pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fadeIn">
+        <a href="">Terminos y condiciones</a>
+        <a href="">ayuda</a>
+    </footer>
+</body>
+</html>
