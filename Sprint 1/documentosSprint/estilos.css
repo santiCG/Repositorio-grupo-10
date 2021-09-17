@@ -13,36 +13,35 @@ html,body
     width: 100%;
     height: 100%;
 }
-nav
-{
+#navegacion {
     display: flex;
     background-color: var(--blue-color);
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-nav ul
+#navegacion ul
 {
     display: flex;
 }
-nav li
+#navegacion li
 {
     list-style: none;
 }
-.brandimage
-{
+
+#logo {
     width: 120px;
     height: 60px;
     padding: 5px;
 }
-nav li a
+#navegacion li a
 {
     padding-right: 25px;
     font-family: 'Quicksand', sans-serif;
     color: white;
     text-decoration: none;
 }
-nav li a:hover
+#navegacion li a:hover
 {
     text-decoration: underline;
 }
@@ -198,15 +197,3 @@ button:hover{
 #a_registroDeUsuarios:hover {
     color: #ad1499;
 }
-
-@media (max-width:900px)
-{
-    .row
-    {
-        display: inherit; 
-    }
-    .colu-1,.colu-2,.colu-3,.colu-4,.colu-5,.colu-6,.colu-7,.colu-8,.colu-9,.colu-10
-    {
-        width: 100%; 
-    }
-}   
