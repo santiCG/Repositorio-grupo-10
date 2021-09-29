@@ -1,7 +1,3 @@
-// var nombre_user = document.getElementById('nombre_usuario').value
-// var anoNacim_user = document.getElementById('contrasena_usuario').value
-// var password_user = document.getElementById('nombre_usuario').value
-
 function validar_nombre_usuario(string) {
     var regularExpression  = /([A-Za-z]$)/g;
 
@@ -61,6 +57,59 @@ function validar_contrasena(string) {
     return false
 }
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_contrasena = validar_contrasena;
-module.exports.validar_anoNacimiento_usuario = validar_anoNacimiento_usuario;
+
+let registros = [];
+
+function agregarRegistro(x, y, z) {
+
+    if (validar_nombre_usuario(x)) {
+
+        if (validar_anoNacimiento_usuario(y)) {
+
+            if (validar_contrasena(z)) {
+
+                registros.push({'usuario' : x,'anoNacimiento' : y,'contrasena' : z})
+            }
+        }
+    }
+}
+
+function EncontrarUsuarioPorEdad(arreglo) {
+
+    var usuarioMayorEdad = [];
+
+    for (var i = 0; i < arreglo.length; i++) {
+
+        if (i === (arreglo.length - 1)) {
+            break
+        }
+        else {
+
+            if (arreglo[i].anoNacimiento < arreglo[i + 1].anoNacimiento) {
+                usuarioMayorEdad.push(arreglo[i])
+            }
+            else {
+                usuarioMayorEdad.push(arreglo[i + 1])
+            }   
+        }
+    }
+    console.log(usuarioMayorEdad)
+    console.log(usuarioMayorEdad.length)
+
+    if (usuarioMayorEdad.length == 1) {
+        return usuarioMayorEdad;
+    }
+    else {
+        EncontrarUsuarioPorEdad(usuarioMayorEdad)
+    }    
+}
+
+agregarRegistro('Homero', 1990, 'FEFhyf12')
+agregarRegistro('Maria', 2004, 'GRlilf12')
+agregarRegistro('Santiago', 2003, 'Fferf12')
+agregarRegistro('Sheila', 1983, 'EDcdf12')
+agregarRegistro('Freyderman', 1980, 'FEFwef12')
+agregarRegistro('Andres', 1995, 'nTRGRnbf12')
+console.log(registros)
+
+console.log(EncontrarUsuarioPorEdad(registros))

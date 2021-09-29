@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="#"  id="registrar_usuario_form">
+        <label for="name">Nombre de Usuario</label>
+        <br>
+        <input type="text" id="nombre_usuario">
+        <br>
+        <label for="name">Año de Nacimiento</label>
+        <br>
+        <input type="number" id="anoNacimiento_usuario" min="1900" max="2021">
+        <br>
+        <label for="name">Contraseña</label>
+        <br>
+        <input type="password" id="contrasena_usuario">
+        <br>
+        <br>
+        <button id="enviar_registro" onclick="agregarRegistro()">Registrarme</button>
+    </form>
+    <script src="validaciones.js"></script>
+</body>
+</html>
