@@ -69,6 +69,7 @@ function agregarRegistro(x, y, z) {
             if (validar_contrasena(z)) {
 
                 registros.push({'usuario' : x,'anoNacimiento' : y,'contrasena' : z})
+                console.log(registros[registros.length - 1])
             }
         }
     }
@@ -76,15 +77,12 @@ function agregarRegistro(x, y, z) {
 
 function EncontrarUsuarioPorEdad(arreglo) {
 
-    var usuarioMayorEdad = [];
+    var usuarioMayorEdad = new Array();
+    var n = arreglo.length
 
-    for (var i = 0; i < arreglo.length; i++) {
+    for (var i = 0; i < n; i += 2) {
 
-        if (i === (arreglo.length - 1)) {
-            break
-        }
-        else {
-
+        try {
             if (arreglo[i].anoNacimiento < arreglo[i + 1].anoNacimiento) {
                 usuarioMayorEdad.push(arreglo[i])
             }
@@ -92,16 +90,19 @@ function EncontrarUsuarioPorEdad(arreglo) {
                 usuarioMayorEdad.push(arreglo[i + 1])
             }   
         }
+        catch {
+            usuarioMayorEdad.push(arreglo[i])
+        }
     }
     console.log(usuarioMayorEdad)
-    console.log(usuarioMayorEdad.length)
 
-    if (usuarioMayorEdad.length == 1) {
-        return usuarioMayorEdad;
-    }
+    if (usuarioMayorEdad.length > 1) {
+        EncontrarUsuarioPorEdad(usuarioMayorEdad)        
+    } 
     else {
-        EncontrarUsuarioPorEdad(usuarioMayorEdad)
-    }    
+        console.log(usuarioMayorEdad[0])
+        return usuarioMayorEdad[0];
+    }
 }
 
 agregarRegistro('Homero', 1990, 'FEFhyf12')
@@ -109,6 +110,9 @@ agregarRegistro('Maria', 2004, 'GRlilf12')
 agregarRegistro('Santiago', 2003, 'Fferf12')
 agregarRegistro('Sheila', 1983, 'EDcdf12')
 agregarRegistro('Freyderman', 1980, 'FEFwef12')
+agregarRegistro('Pepe', 1980, 'FEFwef12')
+agregarRegistro('Julian', 1980, 'FEFwef12')
+agregarRegistro('Alexandra', 1989, 'FEFwef12')
 agregarRegistro('Andres', 1995, 'nTRGRnbf12')
 console.log(registros)
 
