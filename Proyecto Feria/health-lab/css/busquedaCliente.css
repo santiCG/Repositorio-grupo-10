@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,900');
+
+:root {
+    --blue-color: #12557f;
+    --black-color: #444344;
+    --box-shadow:0 0 5px black
+}
+
+html,body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+#navegacion {
+    display: flex;
+    background-color: var(--blue-color);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navegacion ul {
+    display: flex;
+}
+
+#navegacion li {
+    list-style: none;
+}
+
+#logo {
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+}
+
+#navegacion li a {
+    padding-right: 25px;
+    font-family: 'Catamaran', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+#navegacion li a:hover {
+    text-decoration: underline;
+}
+
+.nav_options {
+    margin-right: 20px;
+}
+.main-content {
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    height: 67%;
+    padding-top: 7.8%;
+}
+.main-logo {
+    justify-content: center;
+    padding-left: 38%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+}
+.menu-icon:hover {
+    color: black;
+}
+.main-input {
+    width: 560px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom:10px;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    border: solid 1px rgb(230, 229, 229);
+}
+.main-input:hover {
+    box-shadow: 0px 1px 3px 0px #acabab;
+}
+.main-input input {
+    border:none;
+    border-radius: 100px;
+    width: 540px;
+    height: 40px;
+    padding-left: 20px;
+    cursor: text;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Catamaran', sans-serif;
+    color: var(--black-color);
+}
+.profile {
+    border-radius: 20px;
+    margin-right: 12px;
+}
+.profile:hover {
+    box-shadow: 0px 1px 3px 0px #acabab;
+}
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-input .search-icon {
+    background-image: url('https://leofreshapp.wee.co.il/wp-content/uploads/2018/searchicon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    outline: none;
+}
+
+#busqueda {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#boton_buscar {
+    width: 150px;
+    border: solid 3px #1c1e8f;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+    outline: none;
+    border-color: #12557f;
+    background-color: #e3f3fd;
+    color: #00cb86;
+    font-weight: bold;
+}
+
+#boton_buscar:hover {
+    cursor: pointer;
+}

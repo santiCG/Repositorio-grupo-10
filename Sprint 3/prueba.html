@@ -7,22 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="#"  id="registrar_usuario_form">
         <label for="name">Nombre de Usuario</label>
         <br>
-        <input type="text" id="nombre_usuario">
+        <input type="text" id="nombre_usuario" required>
         <br>
         <label for="name">Año de Nacimiento</label>
         <br>
-        <input type="number" id="anoNacimiento_usuario" min="1900" max="2021">
+        <input type="number" id="anoNacimiento_usuario" required>
         <br>
         <label for="name">Contraseña</label>
         <br>
-        <input type="password" id="contrasena_usuario">
+        <input type="password" id="contrasena_usuario" required>
         <br>
         <br>
-        <button id="enviar_registro" onclick="agregarRegistro()">Registrarme</button>
-    </form>
+        <button id="enviar_registro" onclick = "agregarRegistro()">Registrarme</button>
+        <br>
+        <br>
+        <button id="buscarEdad" onclick = "console.log(EncontrarUsuarioPorEdad(registros))">Buscar usuario con mayor edad</button>
     <script src="validaciones.js"></script>
 </body>
 </html>
