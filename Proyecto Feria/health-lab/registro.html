@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/registro.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav id="navegacion">
         <div class="brand_image">
-                <img class="brandimage" src="" alt="" id="logo">
+            <center><a href="index.html"><img src="images/logo.png" alt="" id="logo"></a></center>
         </div>
     </nav>
     
@@ -22,23 +23,23 @@
                             <div id="preguntas_form_izq">
                                 <label for="name">Nombre de Usuario</label>
                                 <br>
-                                <input type="text" id="nombre_usuario">
+                                <input type="text" id="nombre_usuario" required data-error="Por favor introduce tu nombre>
                                 <br>
                                 <label for="name">Contraseña</label>
                                 <br>
-                                <input type="password" id="contrasena_usuario">
+                                <input type="password" id="contrasena_usuario" required>
                                 <br>
                                 <label for="name">Repetir Contraseña</label>
                                 <br>
-                                <input type="password" id="contrasena_usuario">
+                                <input type="password" id="contrasena_usuario" required>
                             </div>
 
                             <div id="preguntas_form_drh">
                                 <label for="name">Edad</label>
                                 <br>
-                                <input type="number" id="anoNacimiento_usuario" min="0" max="110">
+                                <input type="number" id="anoNacimiento_usuario" min="0" max="150">
                                 <br>
-                                <label for="altura">Estatura</label>
+                                <label for="altura">Estatura (metros)</label>
                                 <br>
                                 <input type="number" id="nombre_usuario">
                                 <br>
@@ -60,5 +61,7 @@
             </div>
         </div>
     </div>
+
+    <script src="validacionRegistro.js"></script>
 </body>
 </html>

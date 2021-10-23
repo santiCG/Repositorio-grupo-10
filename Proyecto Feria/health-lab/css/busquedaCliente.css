@@ -32,9 +32,20 @@ html,body {
 }
 
 #logo {
-    width: 100px;
-    height: 50px;
+    background-color: white;
+    width: 120px;
+    height: 65%;
     padding: 5px;
+    margin-top: 7px;
+    margin-left: 8px;
+    border: solid 2px #00cb86;
+    border-radius: 15px;
+}
+
+#logo:hover {
+    width: 130px;
+    height: 68%;
+    border-width: 3px;
 }
 
 #navegacion li a {
@@ -60,7 +71,6 @@ html,body {
 }
 .main-logo {
     justify-content: center;
-    padding-left: 38%;
     padding-bottom: 15px;
     margin: 0 auto;
     margin-bottom: 28px;
@@ -126,7 +136,7 @@ html,body {
     align-items: center;
     justify-content: center;
 }
-#boton_buscar {
+#boton_buscar, #anadir_med {
     width: 150px;
     border: solid 3px #1c1e8f;
     height: 40px;
@@ -140,6 +150,54 @@ html,body {
     font-weight: bold;
 }
 
-#boton_buscar:hover {
+#anadir_med {
+    width: 235px;
+    margin-top: 15px;
+}
+
+#anadir_med:hover {
+    width: 260px;
+    height: 45px;
     cursor: pointer;
+    color: #12557f;
+    border-color: #00cb86;
+}
+
+#boton_buscar:hover {
+    width: 180px;
+    cursor: pointer;
+    color: #12557f;
+    border-color: #00cb86;
+}
+
+#resultados {
+    padding-top: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+#form_result {
+    padding: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-shadow: 0px 1px 3px 0px #a3a2a2;
+}
+
+.cambiar_dato, #ampm {
+    font-family: 'Catamaran', sans-serif;
+    border: solid 1px rgb(182, 180, 180);
+    border-radius: 100px;
+    width: 300px;
+    height: 26px;
+    padding-left: 10px;
+    margin-bottom: 18px;
+    cursor: text;
+    outline: none;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+#via_med {
+    padding-bottom: 15px;
 }
