@@ -205,12 +205,11 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .main-top{
-	background: #12557f;
+	background: #08489b;
 }
 .left-top a{
 	display: inline-block;
 	color: #ffffff;
-	float: left;
 	font-size: 14px;
 }
 
@@ -255,7 +254,7 @@ button:focus{
 }
 
 .new-btn-d::after {
-    background: #00cb86;
+    background: #34ade6;
 }
 .new-btn-d:hover::after {
     -webkit-transition-delay: 0.175s;
@@ -276,14 +275,14 @@ button:focus{
 	border: 2px solid #ffffff;
 }
 .mail-b a:hover{
-	color: #00cb86;
-	border: 2px solid #00cb86;
+	color: #34ade6;
+	border: 2px solid #34ade6;
 }
 
 .right-top{
 	float: right;
 }
-.right-top ul{}
+
 .right-top ul li{
 	float: left;
 }
@@ -295,7 +294,7 @@ button:focus{
 	border: 2px solid #ffffff;
 }
 .right-top ul li a:hover{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 }
 
@@ -309,7 +308,6 @@ button:focus{
 	padding: 12px 0px;
 	margin: 0px;
 }
-
 
 .top-header .navbar{
 	padding: 5px 0px;
@@ -333,10 +331,8 @@ button:focus{
 	font-weight: 500;
 }
 
-
-
 .top-header .navbar .navbar-collapse ul li a.active{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 	-webkit-transition: all 0.5s ease-in-out 0s;
 	-moz-transition: all 0.5s ease-in-out 0s;
@@ -344,6 +340,7 @@ button:focus{
 	-o-transition: all 0.5s ease-in-out 0s;
 	transition: all 0.5s ease-in-out 0s;
 }
+
 .top-header .navbar .navbar-collapse ul li a.active::after{
 	width: 20px;
 	height: 20px;
@@ -368,11 +365,11 @@ button:focus{
 	-o-transition: all 0.5s ease-in-out 0s;
 	transition: all 0.5s ease-in-out 0s;
 }
+
 .top-header .navbar .navbar-collapse ul li a:hover{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 }
-
 
 .top-header.fixed-menu{
 	width: 100%;
@@ -413,19 +410,72 @@ button:focus{
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
+
 .navbar-toggler span + span{
 	margin-top: 5px;
 }
 
 .navbar-toggler:hover{
-	border: 1px solid #00cb86;
+	border: 1px solid #34ade6;
 }
 
 .navbar-toggler:hover span{
-	background: #00cb86;
+	background: #34ade6;
 }
 
+#user_logo {
+	width: 55px;
+	height: 55px;
+}
 
+/* .header__menu
+{
+    margin: 0px;
+}
+.header__menu:hover ul, ul:hover
+{
+    display: block;
+}
+.header__menu--profile
+{
+    margin: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header__menu li 
+{
+    margin: 20px, 0px;
+}
+.header__menu li a
+{
+    text-decoration: none;
+    color: white;
+}
+.header__menu li a:hover
+{
+    text-decoration: underline;
+    margin: 0px;
+}
+.header__menu ul
+{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    text-align: right;
+    width: 100px;
+    margin: 0px;
+}
+.header__menu--profile p
+{
+    margin: 0px;
+    padding: 0px;
+}
+.header__menu--profile img
+{
+    margin-right: 5px;
+} */
 /*------------------------------------------------------------------
     Banner
 -------------------------------------------------------------------*/
@@ -495,7 +545,7 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details p strong{
-	color: #00cb86;
+	color: #34ade6;
 	font-size: 40px;
 	font-family: 'Catamaran', sans-serif;
 }
@@ -512,7 +562,7 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details a.btn:hover{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 }
 
@@ -525,7 +575,7 @@ button:focus{
 .tooltip-1 {
 	display: inline-block;
 	position: relative;
-	color: #00cb86;
+	color: #34ade6;
 	opacity: 1;
 }
 
@@ -581,7 +631,7 @@ button:focus{
 }
 
 .title-box h2 span{
-	color: #00cb86;
+	color: #34ade6;
 	text-decoration: underline;
 }
 .about-main-info h2{
@@ -589,7 +639,7 @@ button:focus{
 	font-family: 'Catamaran', sans-serif;
 }
 .about-main-info h2 span{
-	color: #00cb86;
+	color: #34ade6;
 	text-decoration: underline;
 }
 .about-main-info{
@@ -597,7 +647,7 @@ button:focus{
 }
 
 .about-m{
-	border: 2px solid #00cb86;
+	border: 2px solid #34ade6;
 	box-shadow: 0 10px 25px 0 rgba(0,0,40,.2);
 }
 
@@ -748,7 +798,7 @@ button:focus{
     position: relative;
     transition: all 0.3s ease 0s;
 }
-.serviceBox:hover{ border-color: #00cb86 ; }
+.serviceBox:hover{ border-color: #34ade6 ; }
 .serviceBox:before{
     content: "";
     border-top: 20px solid #16567f;
@@ -759,7 +809,7 @@ button:focus{
     right: 7px;
     transition: all 0.3s ease 0s;
 }
-.serviceBox:hover:before{ border-top-color: #00cb86 ; }
+.serviceBox:hover:before{ border-top-color: #34ade6 ; }
 .serviceBox .service-icon{
     display: inline-block;
     width: 80px;
@@ -787,8 +837,8 @@ button:focus{
     transition: all 0.3s ease 0s;
 }
 .serviceBox:hover .service-icon:before{
-    border-color: #00cb86 ;
-    background: #00cb86 ;
+    border-color: #34ade6 ;
+    background: #34ade6 ;
 }
 .serviceBox .title{
     font-size: 20px;
@@ -850,7 +900,7 @@ button:focus{
 	margin: 0 10px;
 }
 .services-box .owl-carousel .owl-nav .owl-prev:hover{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 }
 .services-box .owl-carousel .owl-nav .owl-next{
@@ -867,7 +917,7 @@ button:focus{
 	margin: 0 10px;
 }
 .services-box .owl-carousel .owl-nav .owl-next:hover{
-	background: #00cb86;
+	background: #34ade6;
 	color: #ffffff;
 }
 
@@ -969,14 +1019,14 @@ button:focus{
     transition: all 0.6s ease 0.3s;
 }
 .box-gallery .box-content:before{
-    border-left: 2px solid #00cb86;
-    border-top: 2px solid #00cb86;
+    border-left: 2px solid #34ade6;
+    border-top: 2px solid #34ade6;
     top: 19px;
     left: 19px;
 }
 .box-gallery .box-content:after{
-    border-bottom: 2px solid #00cb86;
-    border-right: 2px solid #00cb86;
+    border-bottom: 2px solid #34ade6;
+    border-right: 2px solid #34ade6;
     bottom: 19px;
     right: 19px;
 }
@@ -1003,7 +1053,7 @@ button:focus{
     content: "";
     width: 0;
     height: 2px;
-    background: #00cb86;
+    background: #34ade6;
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -1047,7 +1097,7 @@ button:focus{
     transition: all 0.3s ease-in-out 0s;
 }
 .box-gallery .icon li a:hover{
-    background: #00cb86;
+    background: #34ade6;
     color: #fff;
 }
 @media only screen and (max-width:990px){
@@ -1090,7 +1140,7 @@ button:focus{
 .our-team .pic{
     margin: 8px;
     position: relative;
-    border: 3px solid #00cb86;
+    border: 3px solid #34ade6;
     transition: all 0.5s ease 0s;
 }
 .our-team:hover .pic{
@@ -1100,7 +1150,7 @@ button:focus{
     content: "";
     width: 100%;
     height: 0;
-    background: #00cb86;
+    background: #34ade6;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1235,7 +1285,7 @@ button:focus{
 }
 .blog-inner .item-meta span{
 	color: #ffffff;
-	background: #00cb86;
+	background: #34ade6;
 	display: inline-block;
 	padding: 5px;
 }
@@ -1276,7 +1326,7 @@ button:focus{
 	font-size: 40px;
 	border: 2px dotted #12557f;
 	margin-right: 10px;
-	color: #00cb86;
+	color: #34ade6;
 	border-radius: 50%;
 }
 
@@ -1298,11 +1348,11 @@ button:focus{
 	color: #333333;
 }
 .dit-right a:hover{
-	color: #00cb86;
+	color: #34ade6;
 }
 
 .contact-block .form-group .form-control{
-	background: #00cb86;
+	background: #34ade6;
 	height: 45px;
 	font-size: 16px;
 	border: 0;
@@ -1323,7 +1373,7 @@ button:focus{
 }
 
 .submit-button .btn-common{
-	background-color: #00cb86;
+	background-color: #34ade6;
 	height: 45px;
 	line-height: 45px;
 	font-size: 16px;
@@ -1368,7 +1418,7 @@ select.form-control:not([size]):not([multiple]){
 }
 
 .footer-box .footer-company-name a{
-	color: #00cb86;
+	color: #34ade6;
 }
 .footer-box .footer-company-name a:hover{
 	color: #000000;

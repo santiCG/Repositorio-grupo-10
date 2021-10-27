@@ -1,19 +1,22 @@
-var medicamentos = [{'nombre': 'ibuprofeno', 'via': 'oral', 'periodo': '8 horas'}, 'acetaminofen', 'mieltertos']
+var medicamentos = [{'nombre': 'ibuprofeno', 'via': 'oral', 'tipo': 'pastilla', 'periodo': '8 horas'}, {'nombre': 'acetaminofen', 'via': 'oral', 'tipo': 'pastilla', 'periodo': '12 horas'}, {'nombre': 'mieltertos', 'via': 'oral', 'tipo': 'jarabe', 'periodo': '6 horas'}, {'nombre': 'dolex', 'via': 'oral', 'tipo': 'capsula', 'periodo': '8 horas'}]
 
 function buscar() {
 
-    var input = document.getElementById('input_busqueda').value
+    var input = document.getElementById('input_busqueda').value.toLowerCase()
     var result = document.getElementById('resultados')
 
+    result.innerHTML = ''
+
     for (var i = 0; i < medicamentos.length; i++) {
-        toString(input).toLowerCase()
         
         if (input == medicamentos[i].nombre) {
-            console.log('entro')
+            
             result.innerHTML += '<div id="form_result">' +
                                     '<label for="name"><strong>Nombre:</strong> ' + medicamentos[i].nombre + '</label> <br>'+
                                     '<div style="height: 10px;"></div>' +
                                     '<label for="way"><strong>Via:</strong> ' + medicamentos[i].via +'</label> <br>'+
+                                    '<div style="height: 10px;"></div>' +
+                                    '<label for="way"><strong>Tipo:</strong> ' + medicamentos[i].tipo +'</label> <br>'+
                                     '<div style="height: 10px;"></div>' +
                                     '<label for="time"><strong>Intervalo entre dosis:</strong> ' + medicamentos[i].periodo +'</label> <br>'+ 
                                     '<input type="number" class="cambiar_dato" placeholder="Cambiar intervalo (opcional)"> <br>'+
@@ -38,9 +41,10 @@ function buscar() {
                                             '</select>'+
                                         '</div>'+
                                     '</div>'+
-                                    '<center><button id="anadir_med" onclick="validar_datos_med()">Añador Recordatorio</button></center>'+
+                                    '<center><button id="anadir_med" onclick="validar_datos_med()">Añadir Recordatorio</button></center>'+
                                 '</div>'
-            break
+            return 1;
         }
     }
+    result.innerHTML +=  '<center><label for="extra-data" id="fallo_data">No se encontraron resultados</label></center> <br>'
 }

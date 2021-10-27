@@ -8,60 +8,43 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav id="navegacion">
-        <div class="brand_image">
-            <center><a href="index.html"><img src="images/logo.png" alt="" id="logo"></a></center>
-        </div>
-    </nav>
-    
     <div class="container">
-        <div class="row">
-            <div class="colu-8">
-                <div class="Datos_Usuario">
-                    <form id="registrar_usuario_form">
-                        <div id="formulario">
-                            <div id="preguntas_form_izq">
-                                <label for="name">Nombre de Usuario</label>
-                                <br>
-                                <input type="text" id="nombre_usuario" required data-error="Por favor introduce tu nombre>
-                                <br>
-                                <label for="name">Contraseña</label>
-                                <br>
-                                <input type="password" id="contrasena_usuario" required>
-                                <br>
-                                <label for="name">Repetir Contraseña</label>
-                                <br>
-                                <input type="password" id="contrasena_usuario" required>
-                            </div>
-
-                            <div id="preguntas_form_drh">
-                                <label for="name">Edad</label>
-                                <br>
-                                <input type="number" id="anoNacimiento_usuario" min="0" max="150">
-                                <br>
-                                <label for="altura">Estatura (metros)</label>
-                                <br>
-                                <input type="number" id="nombre_usuario">
-                                <br>
-                                <label for="tipo">¿Eres un profesional de la salud?</label>
-                                <br>
-                                <div id="salud_si">
-                                    <input type="checkbox" name="si" id="check_form">
-                                    <label for="yes">si</label>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div id="div_registro">
-                            <button id="enviar_registro">Registrarme</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="header">
+            <h2>Create Account</h2>
         </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="username" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="email" placeholder="example@gmail.com" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password</label>
+                <input type="password" placeholder="Password" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password check</label>
+                <input type="password" placeholder="Repeat password" id="password2"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <a href="./index.html" id="enviar_registro"><button>Submit</button></a>
+        </form>
     </div>
 
-    <script src="validacionRegistro.js"></script>
+    <script src="./js/validacionRegistro.js"></script>
 </body>
 </html>

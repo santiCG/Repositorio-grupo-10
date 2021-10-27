@@ -3,40 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Sesión</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/registro.css">
+    <title>Log in</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/inicio_ses.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav id="navegacion">
-        <div class="brand_image">
-            <center><a href="index.html"><img src="images/logo.png" alt="" id="logo"></a></center>
-        </div>
-    </nav>
-    
     <div class="container">
-        <center>
-        <div class="row">
-            <div class="colu-8">
-                <div id="recuadro">
-                    <form id="iniciar_usuario_form">
-                            <label for="name">Nombre de Usuario</label>
-                            <br>
-                            <input type="text" id="nickname" required data-error="Por favor introduce tu nombre"></input>
-                            <br>
-                            <label for="name">Contraseña</label>
-                            <br>
-                            <input type="password" id="password" required>
-                            <br>
-                            <label for="">¿No tienes una cuenta?, puedes crear tu cuenta gratis justo <a href="registro.html" id="link_registro">aquí</a>.</label>
-                            <center><button id="boton_ini_ses">Iniciar Sesión</button></center>
-                    </form>
-                </div>
-            </div>
+        <div class="header">
+            <h2>Log in</h2>
         </div>
-        </center>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="username" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Password</label>
+                <input type="password" placeholder="Password" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button>Submit</button>
+        </form>
     </div>
 
-    <script src="validacionRegistro.js"></script>
+    <script src="./js/validarInicioSesion.js"></script>
 </body>
 </html>

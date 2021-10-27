@@ -1,58 +1,79 @@
-function validar_nombre_usuario(string) {
-    var regularExpression  = /([A-Za-z]$)/g;
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 
-    if (regularExpression.test(string)) {
-        
-        if (string[0] === string[0].toUpperCase()) {
-            return true
-        }
+var registros = []
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+    if(checkInputs() == true) {
+        registros.push({'username' : username.value, 'email' : email.value, 'password' : password.value})
     }
-    return false
+});
+
+function checkInputs() {
+	// trim to remove the whitespaces
+	const usernameValue = username.value.trim();
+	const emailValue = email.value.trim();
+	const passwordValue = password.value.trim();
+	const password2Value = password2.value.trim();
+    var check_control = 0
+	
+	if(usernameValue === '') {
+		setErrorFor(username, 'Username cannot be blank');
+	} else {
+		setSuccessFor(username);
+        check_control += 1
+	}
+	
+	if(emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+	} else {
+		setSuccessFor(email);
+        check_control += 1
+	}
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Password cannot be blank');
+	} else {
+		setSuccessFor(password);
+        check_control += 1
+	}
+	
+	if(password2Value === '') {
+		setErrorFor(password2, 'Password 2 cannot be blank');
+	} else if(passwordValue !== password2Value) {
+		setErrorFor(password2, 'Passwords does not match');
+	} else{
+		setSuccessFor(password2);
+        check_control += 1
+	}
+
+
+    if (check_control === 4) {
+        return true
+    }
 }
 
-function validar_anoNacimiento_usuario(valor) {
-
-    if (typeof(valor) == "number"){
-
-        if(valor >= 1900 && valor <= 2022) {
-            return true
-        }
-    }
-    return false
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
 }
- 
-function validar_contrasena(string) {
 
-    var regularExpression  = /(([0-9]{1,}[A-Za-z]{1,})|[0-9]$)/g;
-
-    var letrasMin="abcdefghyjklmnñopqrstuvwxyz";
-    var letrasMayus="ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
-    var nums = "0123456789"
-
-    if (string.length >= 6) {
-        
-        for(i = 0; i < string.length; i++){
-
-            if (letrasMin.indexOf(string.charAt(i),0) != -1){
-                
-                for(j = 0; j < string.length; j++){
-
-                    if (letrasMayus.indexOf(string.charAt(j),0) != -1){
-
-                        for(n = 0; n < string.length; n++){
-
-                            if (nums.indexOf(string.charAt(n),0) != -1){
-        
-                                if (regularExpression.test(string)) {
-
-                                    return true
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    return false
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
 }
+	
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+export {registros};
