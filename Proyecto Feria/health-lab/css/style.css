@@ -298,6 +298,16 @@ button:focus{
 	color: #ffffff;
 }
 
+#boton_reg {
+	background-color: #34ade6;
+	color: #ffffff;
+	font-weight: 600;
+	border-radius: 15px;
+}
+#boton_reg:hover {
+	font-weight: 800;
+}
+
 .wel-nots{
 	float: right;
 	margin-left: 20px;
@@ -424,8 +434,11 @@ button:focus{
 }
 
 #user_logo {
-	width: 55px;
-	height: 55px;
+	margin: 0px;
+	margin-left: 15px;
+	padding: 0px;
+	width: 53px;
+	height: 53px;
 }
 
 /* .header__menu

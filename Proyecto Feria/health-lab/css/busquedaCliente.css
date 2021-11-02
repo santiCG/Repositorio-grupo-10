@@ -38,14 +38,14 @@ html,body {
     padding: 5px;
     margin-top: 7px;
     margin-left: 8px;
-    border: solid 2px #00cb86;
+    border: solid 2px #34ade6;
     border-radius: 15px;
 }
 
 #logo:hover {
     width: 140px;
     height: 69%;
-    border-width: 3px;
+    border-width: 2px;
     cursor: pointer;
 }
 
@@ -138,37 +138,37 @@ html,body {
     justify-content: center;
 }
 #boton_buscar, #anadir_med {
-    width: 150px;
-    border: solid 3px #1c1e8f;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: 'Catamaran', sans-serif;
-    outline: none;
-    border-color: #12557f;
-    background-color: #e3f3fd;
-    color: #00cb86;
-    font-weight: bold;
+    background-color: #34ade6;
+	border: 2px solid #34ade6;
+	border-radius: 20px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+    font-weight: 500;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 15%;
+	text-decoration: none;
 }
 
 #anadir_med {
     width: 235px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 #anadir_med:hover {
-    width: 260px;
-    height: 45px;
+    width: 250px;
     cursor: pointer;
-    color: #12557f;
-    border-color: #00cb86;
+    font-weight: 700;
+    border-color: #34ade6;
 }
 
 #boton_buscar:hover {
     width: 180px;
     cursor: pointer;
-    color: #12557f;
-    border-color: #00cb86;
+    font-weight: 700;
+    border-color: #34ade6;
 }
 
 #resultados {
