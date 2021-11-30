@@ -6,7 +6,7 @@ const password2 = document.getElementById('password2');
 
 var registros = []
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
     if(checkInputs() == true) {

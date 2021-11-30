@@ -1,4 +1,4 @@
-const PUBLIC_VAPID_KEY = 'BKAFfM3UFvYdCcOSXFXhwXZ4Rbtin9buE4n6y-UnP6EusMfSOQcweZWEVe3nWTlIwmC6tSiftNxw5S5J_Sb8_GI'
+const PUBLIC_VAPID_KEY = 'BM0F8lqVqj-p7ona7Z04RweRSQz4cnFibXqAyRAPg81KMr-jMMe7Gs_gCH5bXTBoipdBgc7WaOzItTZ8KzNv6nA'
 
 function urlBase64ToUint8Array(base64String) { // esta funcion sirve para convertir a la llave publica de un formato String a un formato Uint8Array
 
@@ -17,19 +17,25 @@ function urlBase64ToUint8Array(base64String) { // esta funcion sirve para conver
 
 const subscription = async () => { // la palabra asyn indica que la funcion es asincrona
 
+    console.log('Registering a new service worker')
+
     // un Service Worker es un script que su navegador ejecuta en segundo plano, separado de una página web, lo que abre la puerta a funciones que no necesitan una página web o la interacción del usuario. Hoy en día, ya incluyen funciones como notificaciones automáticas y sincronización en segundo plano
     const register = await navigator.serviceWorker.register('./serviceWorker.js', { // aqui estamos registrando el Service Worker en la pagina
         scope: '/' // el alcanze que va a tener el SW
     })
     console.log('new Service Worker')
 
+    // Escuchando notificaciones push
+    console.log('Listening Push Notifications')
+    // const unsubscribe = await register.unregister() // esta funcion sirve para Desuscribir al usuario, pero solo la use para solucionar un error
 
     const subscription = await register.pushManager.subscribe({ // esto sera un objeto usado por el servidor para conectarse y enviar notificacion cada vez que quiera
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY) // esta es la llave publica del servidor
     })
+    console.log(subscription)
 
-
+    // enviar notificacion
     await fetch('/subscription', { // esta es una peticion que se le hace al servidor
         method: 'POST', // metodo de envio de datos
         body: JSON.stringify(subscription), // este es el dato que le enviaremos al servidor para usar la conexion web-push
@@ -43,15 +49,8 @@ const subscription = async () => { // la palabra asyn indica que la funcion es a
 const form = document.querySelector('#myform') // #myform = id del formulario
 const message = document.querySelector('#message') // #message = id del input por el que vamos a escribir el mensaje
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
     e.preventDefault() // esto lo que hace es anular la funcion por defecto de un form, que es resetear todo
-
-    enviar_notificacion()
-
-    form.reset() // esta funcion resetea los datos del formulario
-})
-
-function enviar_notificacion() {
 
     fetch('/new_message', {
         method: 'POST',
@@ -62,6 +61,11 @@ function enviar_notificacion() {
             'Content-Type': 'application/json'
         }
     })
-}
 
-subscription()
+    form.reset() // esta funcion resetea los datos del formulario
+})
+
+// Service Worker Support
+if ("serviceWorker" in navigator) {
+    subscription().catch(err => console.log(err));
+}

@@ -15,6 +15,7 @@ html,body {
     height: 90%;
     overflow: scroll;
     padding: 30px;
+    padding-top: 0px;
     position: relative;
 }
 .carrusel__container
@@ -52,13 +53,12 @@ html,body {
 .carrusel-item__img
 {
     width: 400px;
-    height: 560px;
+    height: 500px;
     object-fit:cover;
 }
 .carrusel-item__details
 {
-    background: linear-gradient(to top , rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100% );
-    font-size: 22px;
+    background: linear-gradient(to top , rgba(0,0,0,0.9) 0%, rgba(0, 0, 0, 0.034) 100% );
     opacity: 0;
     transition: 450ms opacity;
     padding: 40px;
@@ -73,10 +73,14 @@ html,body {
 {
     opacity: 1;
 }
-.carrusel-item__details > div > img
-{
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    justify-content: start;
+
+.carrusel-item__details--title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.carrusel-item__details--subtitle {
+    font-size: 17px;
+    white-space: pre-line;
+    align-content: center;
 }

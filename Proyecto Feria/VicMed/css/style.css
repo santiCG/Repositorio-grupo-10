@@ -433,9 +433,10 @@ button:focus{
 	background: #34ade6;
 }
 
-#user_logo {
+.icon_profile {
 	margin: 0px;
-	margin-left: 15px;
+	margin-left: 10px;
+	margin-right: 5px;
 	padding: 0px;
 	width: 53px;
 	height: 53px;
@@ -943,7 +944,6 @@ button:focus{
 	position: relative;
 }
 
-.well-block{}
 .well-block .well-title h2{
 	font-size: 32px;
 	font-weight: 600;
@@ -1315,7 +1315,9 @@ button:focus{
 .contact-box{
 	padding: 70px 0px;
 }
-
+.left-contact {
+	justify-content: space-between;
+}
 .left-contact{
 	margin-top: 60px;
 }

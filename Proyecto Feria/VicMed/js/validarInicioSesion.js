@@ -1,8 +1,7 @@
-// import {registros} from "./validacionRegistro";
-
 const form = document.getElementById('form');
 const username = document.getElementById('username')
 const password = document.getElementById('password')
+
 var n = 0
 
 var registros = [{'username' : 'santiago', 'email' : 'santiago@gm.com', 'password' : '123'}, {'username' : 'maria', 'email' : 'maria@gm.com', 'password' : '123'}, {'username' : 'andres', 'email' : 'andres@gm.com', 'password' : '123'}]
@@ -12,6 +11,7 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
     
     if(checkInputs() == true) {
+
         window.location.href = './index.html'
     }
 });
@@ -79,3 +79,5 @@ function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control success';
 }
+
+logInTrue()
