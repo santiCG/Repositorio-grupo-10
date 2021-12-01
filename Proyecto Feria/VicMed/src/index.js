@@ -3,6 +3,10 @@ require('dotenv').config() // este modulo sirve para leer los archivos .env en l
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path') // este modulo nos ayuda a unir nombres de diretorios
+const mongoose = require('mongoose');
+
+const url='mongodb://localhost:27017/health';
+mongoose.connect(url);
 
 const app = express() // esto inicia el modulo espress
 
@@ -12,7 +16,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json()) // nos permite convertir inputs en formato http a JSON
 
 // Routes
-app.use(require('./routes/index')) // indica la ruta en la que se indica el index.js
+app.use(require('./routes/index.js')) // indica la ruta en la que se indica el index.js
 
 // Static Content
 app.use(express.static(path.join(__dirname, 'public'))) // __dirname nos da la ruta completa de la carpeta en la que estamos

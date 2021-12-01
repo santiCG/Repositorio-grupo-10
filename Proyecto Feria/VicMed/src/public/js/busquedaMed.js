@@ -9,6 +9,69 @@ var medicamentosAvanzados = [{'nombre': 'etanercept', 'presentacion': ['Enbrel 5
                              {'nombre': 'abatacept', 'presentacion': ['Orencia solución inyectable 125 mg/ml', 'Orencia polvo para reconstituir para solución inyectable IV'], 'indicaciones': ['Artritis Reumatoide'], 'posología' : ['Vía subcutánea 125 mg cada semana', 'Via intravenosa < 60kg 500mg, > 60 kg 750mg, >100kg 1000mg'], 'contraindicaciones': ['Hipersensivilidad', 'Infecciones graves']}
                             ]
 
+// function tipo_de_busqueda() {
+
+//     if(usuario_enfermeria) {
+//         busquedaMedicamentoAvanzado()
+//     }
+//     else if( usuario_enfermeria == false) {
+//         busquedaMedicamentoSencillo()
+//     }
+//     else {
+//         var result = document.getElementById('resultados')
+//         result.innerHTML +=  '<center><label for="extra-data" id="fallo_data">No se encontraron resultados</label></center> <br>'
+//     }
+// }
+
+// function busquedaMedicamentoSencillo() {
+
+//     var input = document.getElementById('input_busqueda').value.toLowerCase()
+//     var result = document.getElementById('resultados')
+
+//     result.innerHTML = ''
+
+//     for (var i = 0; i < medicamentosSencillos.length; i++) {
+        
+//         if (input == medicamentosSencillos[i].nombre) {
+
+//             result.innerHTML += '<div id="form_result">' +
+//                                     '<label for="name"><strong>Nombre:</strong> ' + medicamentosSencillos[i].nombre + '</label> <br>'+
+//                                     '<div style="height: 10px;"></div>' +
+//                                     '<label for="way"><strong>Via:</strong> ' + medicamentosSencillos[i].via +'</label> <br>'+
+//                                     '<div style="height: 10px;"></div>' +
+//                                     '<label for="way"><strong>Tipo:</strong> ' + medicamentosSencillos[i].tipo +'</label> <br>'+
+//                                     '<div style="height: 10px;"></div>' +
+//                                     '<label for="time"><strong>Intervalo entre dosis:</strong> ' + medicamentosSencillos[i].periodo +'</label> <br>'+ 
+//                                     '<input type="number" class="cambiar_dato" placeholder="Cambiar intervalo (opcional)"> <br>'+
+//                                     '<label for="extra-data"><strong>Datos adicionales:</strong></label> <br>'+
+//                                     '<input type="text" class="cambiar_dato" placeholder="opcional"> <br>'+
+//                                     '<label for="extra-data"><strong>Empezar el día:</strong></label> <br>'+
+//                                     '<input type="date" class="cambiar_dato"> <br>'+
+//                                     '<div id="hora_med">' +
+//                                         '<div>'+
+//                                             '<label for="extra-data"><strong>Hora:</strong></label> <br>'+
+//                                             '<input type="number" class="cambiar_dato" placeholder="a que hora deseas iniciar?"> <br>'+
+//                                         '</div>'+
+//                                         '<div>'+
+//                                             '<label for="extra-data"><strong>Minuto:</strong></label> <br>'+
+//                                             '<input type="number" class="cambiar_dato" placeholder="en que minuto?"> <br>'+
+//                                         '</div>'+
+//                                         '<div>'+
+//                                             '<label for="extra-data"><strong>AM / PM:</strong></label> <br>'+
+//                                             '<select name="" id="ampm">'+
+//                                                 '<option value="am">AM</option>'+
+//                                                 '<option value="pm">PM</option>'+
+//                                             '</select>'+
+//                                         '</div>'+
+//                                     '</div>'+
+//                                     '<center><button id="anadir_med" onclick="validar_datos_med()">Añadir Recordatorio</button></center>'+
+//                                 '</div>'
+//             return 1;
+//         }
+//     }
+//     result.innerHTML +=  '<center><label for="extra-data" id="fallo_data">No se encontraron resultados</label></center> <br>'
+// }
+
 function busquedaMedicamento() {
 
     var input = document.getElementById('input_busqueda').value.toLowerCase()
@@ -21,7 +84,6 @@ function busquedaMedicamento() {
         if (input == medicamentosAvanzados[i].nombre) {
 
             result.innerHTML += '<div id="form_result">' +
-                                '<form id="myform">' +
                                     '<label for="name"><strong>Nombre:</strong> ' + medicamentosAvanzados[i].nombre + '</label> <br><br>'+
                                     '<label for="way"><strong>Presentaciones:</strong></label>'+
                                     '<ul id="lista_presentacion">'+
@@ -62,7 +124,6 @@ function busquedaMedicamento() {
                                         '</div>'+
                                     '</div>'+
                                     '<center><button id="anadir_med" onclick="validar_datos_med()">Añadir Recordatorio</button></center>'+
-                                '</form>' +
                                 '</div>'
         
             const list0 = document.getElementById("lista_posologia");
@@ -102,7 +163,6 @@ function busquedaMedicamento() {
         if (input == medicamentosSencillos[i].nombre) {
 
             result.innerHTML += '<div id="form_result">' +
-                                '<form id="myform">' +
                                     '<label for="name"><strong>Nombre:</strong> ' + medicamentosSencillos[i].nombre + '</label> <br>'+
                                     '<div style="height: 10px;"></div>' +
                                     '<label for="way"><strong>Via:</strong> ' + medicamentosSencillos[i].via +'</label> <br>'+
@@ -112,7 +172,7 @@ function busquedaMedicamento() {
                                     '<label for="time"><strong>Intervalo entre dosis:</strong> ' + medicamentosSencillos[i].periodo +'</label> <br>'+ 
                                     '<input type="number" class="cambiar_dato" placeholder="Cambiar intervalo (opcional)"> <br>'+
                                     '<label for="extra-data"><strong>Datos adicionales:</strong></label> <br>'+
-                                    '<input type="text" id="message" class="cambiar_dato" placeholder="opcional" autofocus> <br>'+
+                                    '<input type="text" class="cambiar_dato" placeholder="opcional"> <br>'+
                                     '<label for="extra-data"><strong>Empezar el día:</strong></label> <br>'+
                                     '<input type="date" class="cambiar_dato"> <br>'+
                                     '<div id="hora_med">' +
@@ -133,7 +193,6 @@ function busquedaMedicamento() {
                                         '</div>'+
                                     '</div>'+
                                     '<center><button id="anadir_med" onclick="validar_datos_med()">Añadir Recordatorio</button></center>'+
-                                '</form>' +
                                 '</div>'
             return 1;
         }

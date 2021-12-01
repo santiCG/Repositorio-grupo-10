@@ -1,11 +1,25 @@
+
 const { Router } = require('express') // Router es un objeto que nos permite definir rutas
 const router = Router()
+const usuario = require('../public/models/usuario.js');
 
 const webpush = require('../webpush')
 let pushSubscription
 
-router.post('/subscription', async (req, res) => {  // escuchar una ruta llamada subscription 
+router.get('/usuarios', async function (req, res) {
+    usuario.find().then(function (usuarios) {
+        res.send(usuarios);
+    });
+})
 
+router.post('/usuarios', async function (req, res) {
+    usuario.create(req.body).then(function (usuario) {
+        res.send(usuario);
+    });
+})
+
+router.post('/subscription', async (req, res) => {  // escuchar una ruta llamada subscription 
+    console.log("AAAAA")
     pushSubscription = req.body // guardamos en la variable pushSubscription las peticiones que nos van llegando
     console.log(pushSubscription)
 
@@ -18,7 +32,7 @@ router.post('/new_message', async (req, res) => {
     const { message } = req.body
 
     const data_noty = JSON.stringify({  // este es un objeto que guardara los datos que enviaremos en la notificacion, JSON.stringify es un metodo para comvertir el objeto en un string
-        title: '¡Hey!, es hora de tu mediciona',
+        title: 'Hey!, es hora de tu mediciona',
         message
     })
     res.status(200).json()
